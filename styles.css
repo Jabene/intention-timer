@@ -1,0 +1,70 @@
+/*
+Main background: #2B2733
+Text on main background: #CBC9CF
+Header, cards: #46424D
+Card shadow: #26222D
+Text on header and cards: #FFF
+Study: #B3FD78
+Meditate: #C278FD
+Exercise: #FD8078
+Error: #EFB7EC
+*/
+
+* {
+  font-family:"montserrat";
+  color:white;
+}
+
+header {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color:#46424D;
+  color:white;
+  /* font-weight:400; */
+  height:8%;
+}
+
+body {
+  background-color:#46424D;
+}
+
+section {
+  display:flex;
+  justify-content:space-between;
+  width:100%;
+  height:92%;
+}
+
+.body-blocks {
+  margin:0px;
+}
+
+#new-activity-block {
+  width:65%;
+  height:100%;
+  background-color:#2B2733;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#new-activity-heading {
+  align-self:flex-start;
+  margin-left:5%;
+}
+
+#form {
+  background-color:#46424D;
+  width:90%;
+  height:80%;
+  display:flex;
+  /* margin-left:20px; */
+}
+
+#past-activity-block {
+ width:34%;
+ height:100%;
+ background-color:#2B2733;
+}
