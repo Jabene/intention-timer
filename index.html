@@ -1,0 +1,52 @@
+<!-- <!DOCTYPE html> -->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <title>Intention Timer</title>
+  </head>
+  <body>
+    <header>
+        <h1>INTENTION TIMER</h1>
+    </header>
+    <main>
+      <!-- <section> for .new-activity-block and .past-activity-block -->
+      <section class="body-blocks new-activity-block"> <!--remove id, combine into two classes-->
+        <h2 class="body-headings" id="">New Activity</h2>
+          <form id="form">
+            <div id="form-alignment">
+              <div>
+                <h3>Select a category:</h3>
+                <div id="activity-buttons-row">
+                  <button class="activity-buttons" id="study-button"><img src="./assets/study.svg">Study</button>
+                  <button class="activity-buttons" id="meditate-button"><img src="./assets/meditate.svg">Meditate</button>
+                  <button class="activity-buttons" id="exercise-button"><img src="./assets/exercise.svg">Exercise</button>
+                </div>
+              </div>
+              <div id="accomplish-input-column">
+                <label for="">What would you like to accomplish during this time?</label>
+                <input type="text" class="" id="" />
+              </div>
+              <div id="time-input-row">
+                <div class="time-input-columns">
+                  <label for="">Minutes</label>
+                  <input type="text" class="" id="" />
+                </div>
+                <div class="time-input-columns">
+                  <label for="">Seconds</label>
+                  <input type="text" class="" id="" />
+                </div>
+              </div>
+              <button id="start-activity-button">START ACTIVITY</button>
+            </div>
+          </form>
+      </section>
+      <section class="body-blocks past-activity-block">
+        <h2 class="body-headings">Past Activities</h2>
+        <p class="no-activities" id="no-activity-paragraph">You haven't logged any activities yet.</p>
+        <p class="no-activities">Complete the form to the left to get started!</p>
+      </section>
+    </main>
+  </body>
+</html>
