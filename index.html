@@ -1,7 +1,10 @@
+<!-- <!DOCTYPE html> -->
 <html>
   <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <title>Intention Timer</title>
   </head>
   <body>
     <header>
@@ -9,11 +12,27 @@
     </header>
     <section>
       <div class ="body-blocks" id="new-activity-block">
-        <h2 id="new-activity-heading">New Activity</h2>
-        <form id="form"></form>
+        <h2 class="body-headings" id="">New Activity</h2>
+        <form id="form">
+          <h3>Select a category:</h3>
+          <div id="activity-buttons-row">
+            <button class="activity-buttons" id="study-button"><h4>Study</h4></button>
+            <button class="activity-buttons" id="meditate-button"><h4>Meditate</h4></button>
+            <button class="activity-buttons" id="exercise-button"><h4>Exercise</h4></button>
+          </div>
+          <h3>What would you like to accomplish during this time?</h3>
+          <input type="text" class="" id="" />
+          <!-- <label for=""></label> -->
+          <div id="time-input-row">
+            <label for=""></label>
+            <input type="text" class="" id="" />
+          </div>
+        </form>
       </div>
       <div class="body-blocks" id="past-activity-block">
-        <h2>Past Activities</h2>
+        <h2 class="body-headings">Past Activities</h2>
+        <p class="no-activities" id="no-activity-paragraph">You haven't logged any activities yet.</p>
+        <p class="no-activities">Complete the form to the left to get started!</p>
       </div>
     </section>
   </body>
