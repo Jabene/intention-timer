@@ -21,7 +21,6 @@ header {
   align-items:center;
   background-color:#46424D;
   color:white;
-  /* font-weight:400; */
   height:8%;
 }
 
@@ -45,15 +44,13 @@ section {
   height:100%;
   background-color:#2B2733;
   display:flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
+  flex-direction:column;
+  align-items:center;
 }
 
 .body-headings {
   align-self:flex-start;
   margin-left:5%;
-  /* margin-top:4%; */
   width:100%;
 }
 
@@ -63,21 +60,85 @@ section {
   height:90%;
   display:flex;
   border-radius:7px;
-  box-shadow: 5px 10px #26222d;
-  /* margin-left:20px; */
+  box-shadow:5px 10px #26222d;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
 }
 
 #past-activity-block {
   width:34%;
   height:100%;
   background-color:#2B2733;
-  /* display:flex; */
 }
+
 .no-activities {
   display:flex;
   flex-direction:row;
   justify-content:center;
 }
+
 #no-activity-paragraph {
   margin-top:10%;
+}
+
+#form-alignment {
+  display:flex;
+  flex-direction:column;
+  justify-content:space-evenly;
+  align-items:stretch;
+  height:90%;
+  width:80%;
+}
+
+#activity-buttons-row {
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+}
+
+.activity-buttons {
+  background-color:#46424D;
+  border:white solid 1px;
+  border-radius:3px;
+  width:20%;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+}
+
+#accomplish-input-column {
+  display:flex;
+  flex-direction:column;
+}
+
+#time-input-row {
+  display:flex;
+  justify-content:space-between;
+}
+
+.time-input-columns {
+  display:flex;
+  flex-direction:column;
+  width: 40%;
+}
+
+form,
+input {
+  background-color:#46424D;
+  border-bottom:solid 1px;
+  border-top:none;
+  border-right:none; 
+  border-left:none;
+}
+
+#start-activity-button {
+  align-self:flex-end;
+  height:5%;
+  width:25%;
+  border-radius:3px;
+  border:0px;
+  background-color:white;
+  color:#46424D;
 }
