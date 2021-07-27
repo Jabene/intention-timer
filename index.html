@@ -10,8 +10,9 @@
     <header>
         <h1>INTENTION TIMER</h1>
     </header>
-    <section>
-      <div class ="body-blocks" id="new-activity-block">
+    <main>
+      <!-- <section> for .new-activity-block and .past-activity-block -->
+      <section class="body-blocks new-activity-block"> <!--remove id, combine into two classes-->
         <h2 class="body-headings" id="">New Activity</h2>
           <form id="form">
             <div id="form-alignment">
@@ -40,12 +41,12 @@
               <button id="start-activity-button">START ACTIVITY</button>
             </div>
           </form>
-      </div>
-      <div class="body-blocks" id="past-activity-block">
+      </section>
+      <section class="body-blocks past-activity-block">
         <h2 class="body-headings">Past Activities</h2>
         <p class="no-activities" id="no-activity-paragraph">You haven't logged any activities yet.</p>
         <p class="no-activities">Complete the form to the left to get started!</p>
-      </div>
-    </section>
+      </section>
+    </main>
   </body>
 </html>

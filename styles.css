@@ -28,7 +28,7 @@ body {
   background-color:#46424D;
 }
 
-section {
+main {
   display:flex;
   justify-content:space-between;
   width:100%;
@@ -39,7 +39,7 @@ section {
   margin:0px;
 }
 
-#new-activity-block {
+.new-activity-block {
   width:65.75%;
   height:100%;
   background-color:#2B2733;
@@ -67,7 +67,7 @@ section {
   flex-wrap:wrap;
 }
 
-#past-activity-block {
+.past-activity-block {
   width:34%;
   height:100%;
   background-color:#2B2733;
