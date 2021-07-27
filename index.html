@@ -8,20 +8,19 @@
   </head>
   <body>
     <header>
-        <h1>INTENTION TIMER</h1>
+      <h1>INTENTION TIMER</h1>
     </header>
     <main>
-      <!-- <section> for .new-activity-block and .past-activity-block -->
-      <section class="body-blocks new-activity-block"> <!--remove id, combine into two classes-->
+      <section class="body-blocks new-activity-block"> 
         <h2 class="body-headings" id="">New Activity</h2>
           <form id="form">
             <div id="form-alignment">
               <div>
                 <h3>Select a category:</h3>
                 <div id="activity-buttons-row">
-                  <button class="activity-buttons" id="study-button"><img src="./assets/study.svg">Study</button>
-                  <button class="activity-buttons" id="meditate-button"><img src="./assets/meditate.svg">Meditate</button>
-                  <button class="activity-buttons" id="exercise-button"><img src="./assets/exercise.svg">Exercise</button>
+                  <button class="activity-buttons" id="study-button"><img id="study-icon" src="./assets/study.svg" alt="light bulb">Study</button>
+                  <button class="activity-buttons" id="meditate-button"><img id="meditate-icon" src="./assets/meditate.svg" alt="lotus flower">Meditate</button>
+                  <button class="activity-buttons" id="exercise-button"><img id="ecercise-icon" src="./assets/exercise.svg" alt="running shoe">Exercise</button>
                 </div>
               </div>
               <div id="accomplish-input-column">
@@ -48,5 +47,7 @@
         <p class="no-activities">Complete the form to the left to get started!</p>
       </section>
     </main>
+    <!-- <script src="./activity.js"></script> -->
+    <script src="./main.js"></script>
   </body>
 </html>

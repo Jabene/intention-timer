@@ -1,5 +1,5 @@
-/*
-Main background: #2B2733
+
+/* Main background: #2B2733
 Text on main background: #CBC9CF
 Header, cards: #46424D
 Card shadow: #26222D
@@ -7,8 +7,8 @@ Text on header and cards: #FFF
 Study: #B3FD78
 Meditate: #C278FD
 Exercise: #FD8078
-Error: #EFB7EC
-*/
+Error: #EFB7EC */
+
 
 * {
   font-family:"montserrat";
@@ -111,15 +111,25 @@ main {
   font-size:1em;
 }
 
+.meditate-button-clicked {
+  border-color:#C278FD; 
+  color:#C278FD;
+}
+
+.study-button-clicked {
+  border-color:#B3FD78;
+  color:#B3FD78;
+}
+
+.exercise-button-clicked {
+  border-color:#FD8078;
+  color:#FD8078;
+}
+
 buttons,
 img {
   width:15%;
   padding-bottom:.25em;
-}
-
-buttons,
-h4 {
-
 }
 
 #accomplish-input-column {
