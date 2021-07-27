@@ -3,6 +3,8 @@ var studyButton = document.getElementById('study-button');
 var meditateButton = document.getElementById('meditate-button');
 var exerciseButton = document.getElementById('exercise-button');
 var meditateImage = document.getElementById('meditate-icon');
+var exerciseImage = document.getElementById('exercise-icon');
+var studyImage = document.getElementById('study-icon');
 
 // allCategoryButtons.addEventListener('click', )
 studyButton.addEventListener('click', studyButtonClicked);
@@ -22,11 +24,21 @@ function meditateButtonClicked(e) {
 function studyButtonClicked(e) {
     e.preventDefault();
     studyButton.classList.toggle('study-button-clicked');
+    if (studyButton.classList.contains('study-button-clicked')){
+        studyImage.src = "./assets/study-active.svg";
+    } else {
+        studyImage.src = "./assets/study.svg";  
+    }
 }
 
 function exerciseButtonClicked(e) {
     e.preventDefault();
     exerciseButton.classList.toggle('exercise-button-clicked');
+    if (exerciseButton.classList.contains('exercise-button-clicked')){
+        exerciseImage.src = "./assets/exercise-active.svg";
+    } else {
+        exerciseImage.src = "./assets/exercise.svg";  
+    }
 }
 
 
