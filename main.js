@@ -11,36 +11,68 @@ studyButton.addEventListener('click', studyButtonClicked);
 meditateButton.addEventListener('click', meditateButtonClicked);
 exerciseButton.addEventListener('click', exerciseButtonClicked);
 
-function meditateButtonClicked(e) {
-    e.preventDefault();
-    meditateButton.classList.toggle('meditate-button-clicked');
-    if (meditateButton.classList.contains('meditate-button-clicked')){
-        meditateImage.src = "./assets/meditate-active.svg";
-    } else {
-        meditateImage.src = "./assets/meditate.svg";  
-    }
+function studyButtonClicked(e) {
+  e.preventDefault();
+  studyButtonToggle();
 }
 
-function studyButtonClicked(e) {
-    e.preventDefault();
-    studyButton.classList.toggle('study-button-clicked');
-    if (studyButton.classList.contains('study-button-clicked')){
-        studyImage.src = "./assets/study-active.svg";
-    } else {
-        studyImage.src = "./assets/study.svg";  
-    }
+function meditateButtonClicked(e) {
+  e.preventDefault();
+  meditateButtonToggle();
 }
 
 function exerciseButtonClicked(e) {
-    e.preventDefault();
-    exerciseButton.classList.toggle('exercise-button-clicked');
-    if (exerciseButton.classList.contains('exercise-button-clicked')){
-        exerciseImage.src = "./assets/exercise-active.svg";
-    } else {
-        exerciseImage.src = "./assets/exercise.svg";  
-    }
+  e.preventDefault();
+  exerciseButtonToggle();
 }
 
+function exerciseButtonToggle() {
+  if (studyButton.classList.length > 1) {
+    studyButtonToggle();
+  }
+  if (meditateButton.classList.length > 1) {
+    meditateButtonToggle();
+  }
 
+  exerciseButton.classList.toggle('exercise-button-clicked');
 
+  if (exerciseButton.classList.contains('exercise-button-clicked')){
+    exerciseImage.src = "./assets/exercise-active.svg";
+  } else {
+    exerciseImage.src = "./assets/exercise.svg";
+  }
+}
 
+function studyButtonToggle() {
+  if (meditateButton.classList.length > 1) {
+    meditateButtonToggle();
+  }
+  if (exerciseButton.classList.length > 1) {
+    exerciseButtonToggle();
+  }
+
+  studyButton.classList.toggle('study-button-clicked');
+
+  if (studyButton.classList.contains('study-button-clicked')){
+      studyImage.src = "./assets/study-active.svg";
+  } else {
+      studyImage.src = "./assets/study.svg";
+  }
+}
+
+function meditateButtonToggle() {
+  if (studyButton.classList.length > 1) {
+    studyButtonToggle();
+  }
+  if (exerciseButton.classList.length > 1) {
+    exerciseButtonToggle();
+  }
+
+  meditateButton.classList.toggle('meditate-button-clicked');
+
+  if (meditateButton.classList.contains('meditate-button-clicked')){
+      meditateImage.src = "./assets/meditate-active.svg";
+  } else {
+      meditateImage.src = "./assets/meditate.svg";
+  }
+}
