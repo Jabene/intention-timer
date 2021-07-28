@@ -5,11 +5,13 @@ var exerciseButton = document.getElementById('exercise-button');
 var meditateImage = document.getElementById('meditate-icon');
 var exerciseImage = document.getElementById('exercise-icon');
 var studyImage = document.getElementById('study-icon');
+var charFilter = document.querySelector('.number-input');
 
 // allCategoryButtons.addEventListener('click', )
 studyButton.addEventListener('click', studyButtonClicked);
 meditateButton.addEventListener('click', meditateButtonClicked);
 exerciseButton.addEventListener('click', exerciseButtonClicked);
+charFilter.addEventListener('keydown', preventCharE);
 
 function studyButtonClicked(e) {
   e.preventDefault();
@@ -74,5 +76,13 @@ function meditateButtonToggle() {
       meditateImage.src = "./assets/meditate-active.svg";
   } else {
       meditateImage.src = "./assets/meditate.svg";
+  }
+}
+
+function preventCharE(e) {
+  var invalidChar = ['e', 'E'];
+
+  if (invalidChar.includes(e.key)) {
+    e.preventDefault();
   }
 }
