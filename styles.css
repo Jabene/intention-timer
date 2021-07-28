@@ -112,7 +112,7 @@ main {
 }
 
 .meditate-button-clicked {
-  border-color:#C278FD; 
+  border-color:#C278FD;
   color:#C278FD;
 }
 
@@ -135,6 +135,33 @@ img {
 #accomplish-input-column {
   display:flex;
   flex-direction:column;
+}
+
+.warning-div {
+  color:#EFB7EC;
+  display:flex;
+  flex-direction:row;
+  align-items:flex-end;
+  margin-top:2%;
+  font-size:1em;
+}
+
+.small-warning-div {
+  color:#EFB7EC;
+  display:flex;
+  flex-direction:row;
+  align-items:flex-end;
+  margin-top:5%;
+}
+
+.warning-icon {
+  width:3%;
+  margin-right:1.5%;
+}
+
+.small-warning-icon {
+  width:6%;
+  margin-right:3%;
 }
 
 #time-input-row {
@@ -168,4 +195,8 @@ input {
   border:0px;
   background-color:white;
   color:#46424D;
+}
+
+.hidden {
+  display:none;
 }

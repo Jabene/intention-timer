@@ -25,16 +25,19 @@
               </div>
               <div id="accomplish-input-column">
                 <label for="">What would you like to accomplish during this time?</label>
-                <input type="text" class="" id="" />
+                <input type="text-box" class="" id="accomplish-input" />
+                <div class="warning-div hidden" id="accomplish-input-warning"><img class="warning-icon" src="./assets/warning.svg" alt="Warning icon">A description is required</div>
               </div>
               <div id="time-input-row">
                 <div class="time-input-columns">
                   <label for="minutes">Minutes</label>
                   <input type="number" class="number-input" id="minutes" />
+                  <div class="small-warning-div hidden" id="minutes-input-warning"><img class="small-warning-icon" src="./assets/warning.svg" alt="Warning icon">An input is required</div>
                 </div>
                 <div class="time-input-columns">
                   <label for="seconds">Seconds</label>
                   <input type="number" class="number-input" id="seconds" />
+                  <div class="small-warning-div hidden" id="seconds-input-warning"><img class="small-warning-icon" src="./assets/warning.svg" alt="Warning icon">An input is required</div>
                 </div>
               </div>
               <button id="start-activity-button">START ACTIVITY</button>
