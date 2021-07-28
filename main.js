@@ -11,12 +11,15 @@ studyButton.addEventListener('click', studyButtonClicked);
 meditateButton.addEventListener('click', meditateButtonClicked);
 exerciseButton.addEventListener('click', exerciseButtonClicked);
 
+
+//Try to build a helper function using a for loop if time allows 
 function meditateButtonClicked(e) {
     e.preventDefault();
     meditateButton.classList.toggle('meditate-button-clicked');
     if (meditateButton.classList.contains('meditate-button-clicked')){
         meditateImage.src = "./assets/meditate-active.svg";
-    } else {
+    } 
+    else {
         meditateImage.src = "./assets/meditate.svg";  
     }
 }
