@@ -13,12 +13,19 @@ var accomplishInput = document.getElementById('accomplish-input');
 var accomplishWarning = document.getElementById('accomplish-input-warning');
 var minutesWarning = document.getElementById('minutes-input-warning');
 var secondsWarning = document.getElementById('seconds-input-warning');
+var formAlignment = document.querySelector('#form-alignment');
+var activityTimer = document.querySelector('#activity-timer');
+var accomplishOutput = document.querySelector('#accomplish-output');
+var timeLeft = document.querySelector('#time-left');
+var startButton = document.querySelector('#start-button');
+
 // allCategoryButtons.addEventListener('click', )
 studyButton.addEventListener('click', studyButtonClicked);
 meditateButton.addEventListener('click', meditateButtonClicked);
 exerciseButton.addEventListener('click', exerciseButtonClicked);
 charFilter.addEventListener('keydown', preventCharE);
 startActivityButton.addEventListener('click', startActivity);
+
 
 var savedActivities = [];
 
@@ -85,9 +92,17 @@ function preventCharE(e) {
 function startActivity(e) {
   e.preventDefault();
   checkInput();
+  hide(formAlignment);
+  show(activityTimer);
+  updateTimer();
   var categorySelected = selectCategory();
   var activity = new Activity (categorySelected, accomplishInput, minutes, seconds);
   savedActivities.push(activity);
+}
+function updateTimer() {
+  accomplishOutput.innerText = accomplishInput.value;
+  timeLeft.innerText = `${minutes.value}:${seconds.value}`;
+  changeButtonBorder();
 }
 function selectCategory() {
   if (studyButton.classList.length > 1) {
@@ -115,9 +130,18 @@ function checkInput() {
     hide(secondsWarning);
   }
 }
+function changeButtonBorder() {
+  if (studyButton.classList.length > 1) {
+    startButton.classList.add('study-button-clicked');
+  } else if (meditateButton.classList.length > 1) {
+    startButton.classList.add('meditate-button-clicked');
+  } else if (exerciseButton.classList.length > 1) {
+    startButton.classList.add('exercise-button-clicked');
+  }
+}
 function hide(element) {
     element.classList.add('hidden');
-    }
+}
 function show(element) {
     element.classList.remove('hidden');
-    }
+}
