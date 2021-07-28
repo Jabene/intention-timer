@@ -1,7 +1,7 @@
 // var allCategoryButtons = document.getElementbyId(activity-buttons-row);
-var studyButton = document.getElementById('study-button');
-var meditateButton = document.getElementById('meditate-button');
 var exerciseButton = document.getElementById('exercise-button');
+var meditateButton = document.getElementById('meditate-button');
+var studyButton = document.getElementById('study-button');
 var meditateImage = document.getElementById('meditate-icon');
 var exerciseImage = document.getElementById('exercise-icon');
 var studyImage = document.getElementById('study-icon');
