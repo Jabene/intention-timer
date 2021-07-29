@@ -29,6 +29,10 @@ form.addEventListener('submit', startActivity);
 startButton.addEventListener('click', setCountdown);
 
 var savedActivities = [];
+var gMinutes;
+var gSeconds;
+var time;
+var timerId;
 
 function studyButtonClicked(e) {
   e.preventDefault();
@@ -102,15 +106,22 @@ function startActivity(e) {
   checkInput();
   hide(formAlignment);
   show(activityTimer);
+  gMinutes = parseInt(minutesInput.value);
+  gSeconds = parseInt(secondsInput.value);
   updateTimer();
   var categorySelected = selectCategory();
   var activity = new Activity (categorySelected, accomplishInput, minutes, seconds);
   savedActivities.push(activity);
+
 }
 
 function updateTimer() {
   accomplishOutput.innerText = accomplishInput.value;
-  timeLeft.innerText = `${minutes.value}:${seconds.value}`;
+  displaySec = gSeconds
+  displayMin = gMinutes
+  displaySec = gSeconds < 10 ? '0' + gSeconds : gSeconds;
+  displayMin = gMinutes < 10 ? '0' + gMinutes : gMinutes;
+  timeLeft.innerHTML = `${displayMin}:${displaySec}`;
   changeButtonBorder();
 }
 
@@ -153,43 +164,23 @@ function changeButtonBorder() {
 }
 
 function setCountdown() {
-  var userMinutes = parseInt(minutesInput.value);
-  var userSeconds = parseInt(secondsInput.value);
-
-  startTimer(userMinutes, userSeconds);
+  var minutesToSeconds = gMinutes * 60;
+  time = minutesToSeconds + gSeconds;
+  timerId = setInterval(startTimer, 1000)
 }
 
-function startTimer(minutes, seconds) {
-  var minutesInSeconds = minutes * 60; //60
-  var clockSeconds = seconds; //10
-  var totalSeconds = minutesInSeconds + clockSeconds; //70
+function startTimer() {
+  var minutes = Math.floor(time/60);
+  var seconds = time%60;
+  
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  seconds = seconds < 10 ? '0' + seconds : seconds;
 
-  if (totalSeconds === 0) {
-    clearInterval();
+  timeLeft.innerHTML = `${minutes}:${seconds}`;
+  time --;
+  if (time === -1) {
+    clearInterval(timerId);
   }
-
-  var clockMinutes = Math.floor(totalSeconds / 60);
-
-  // if (clockSeconds < 0) {
-  //   clockSeconds = 59;
-  // }
-
-  // clockSeconds = clockSeconds = 0 ? 59 : totalSeconds - minutesInSeconds;
-
-  clockMinutes = clockMinutes < 10 ? "0" + clockMinutes : clockMinutes;
-  clockSeconds = clockSeconds < 10 ? "0" + clockSeconds : clockSeconds;
-
-  timeLeft.innerText = `${clockMinutes}:${clockSeconds}`;
-
-  if (clockMinutes === 0 && clockSeconds === 0)
-  {
-    clearInterval();
-  }
-
-  clockSeconds--;
-  //clockSeconds = clockSeconds < 0 ? 0 : clockSeconds;
-
-  setInterval(startTimer, 1000, clockMinutes, clockSeconds);
 }
 
 function hide(element) {
