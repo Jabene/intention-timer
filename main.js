@@ -18,18 +18,17 @@ var activityTimer = document.querySelector('#activity-timer');
 var accomplishOutput = document.querySelector('#accomplish-output');
 var timeLeft = document.querySelector('#time-left');
 var startButton = document.querySelector('#start-button');
-var form = document.getElementById('form');
+var form = document.querySelector('form');
+
 // allCategoryButtons.addEventListener('click', )
 studyButton.addEventListener('click', studyButtonClicked);
 meditateButton.addEventListener('click', meditateButtonClicked);
 exerciseButton.addEventListener('click', exerciseButtonClicked);
-charFilter.addEventListener('keydown', preventCharE);
+charFilter.addEventListener('keydown', preventChar);
 form.addEventListener('submit', startActivity);
-startButton.addEventListener('click', function() {
-   startTimer(timeLeft)})
+startButton.addEventListener('click', setCountdown);
 
 var savedActivities = [];
-var activity;
 
 function studyButtonClicked(e) {
   e.preventDefault();
@@ -91,7 +90,7 @@ function meditateButtonToggle() {
   }
 }
 
-function preventCharE(e) {
+function preventChar(e) {
   var invalidChar = ['e', 'E', '-', '+'];
   if (invalidChar.includes(e.key)) {
     e.preventDefault();
@@ -108,7 +107,6 @@ function startActivity(e) {
   var activity = new Activity (categorySelected, accomplishInput, minutes, seconds);
   savedActivities.push(activity);
 }
-
 
 function updateTimer() {
   accomplishOutput.innerText = accomplishInput.value;
@@ -154,26 +152,45 @@ function changeButtonBorder() {
   }
 }
 
-// function setInterval(startTimer, 1000);
+function setCountdown() {
+  var userMinutes = parseInt(minutesInput.value);
+  var userSeconds = parseInt(secondsInput.value);
 
-function startTimer() {
-  //activity.minutes = minutes
-  //activity.seconds = seconds 
-  var savedMinutes = parseInt(activity.minutes * 60);
-  var savedSeconds = parseInt(activity.seconds);
-  var time = savedMinutes + savedSeconds
-  
-  var minutesTimer = Math.floor(time/60)
-  var secondsTimer = time % 60
+  startTimer(userMinutes, userSeconds);
+}
 
-      minutesTimer = minutes < 10 ? "0" + minutes : minutes;
-      secondsTimer = seconds < 10 ? "0" + seconds : seconds;
+function startTimer(minutes, seconds) {
+  var minutesInSeconds = minutes * 60; //60
+  var clockSeconds = seconds; //10
+  var totalSeconds = minutesInSeconds + clockSeconds; //70
 
-      timeLeft.innerText = `${minutesTimer}:${secondsTimer}`
-      time--;
+  if (totalSeconds === 0) {
+    clearInterval();
+  }
 
-  };
+  var clockMinutes = Math.floor(totalSeconds / 60);
 
+  // if (clockSeconds < 0) {
+  //   clockSeconds = 59;
+  // }
+
+  // clockSeconds = clockSeconds = 0 ? 59 : totalSeconds - minutesInSeconds;
+
+  clockMinutes = clockMinutes < 10 ? "0" + clockMinutes : clockMinutes;
+  clockSeconds = clockSeconds < 10 ? "0" + clockSeconds : clockSeconds;
+
+  timeLeft.innerText = `${clockMinutes}:${clockSeconds}`;
+
+  if (clockMinutes === 0 && clockSeconds === 0)
+  {
+    clearInterval();
+  }
+
+  clockSeconds--;
+  //clockSeconds = clockSeconds < 0 ? 0 : clockSeconds;
+
+  setInterval(startTimer, 1000, clockMinutes, clockSeconds);
+}
 
 function hide(element) {
     element.classList.add('hidden');
@@ -182,4 +199,3 @@ function hide(element) {
 function show(element) {
     element.classList.remove('hidden');
 }
-
