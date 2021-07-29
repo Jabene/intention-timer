@@ -1,4 +1,5 @@
 // var allCategoryButtons = document.getElementbyId(activity-buttons-row);
+var logActivity = document.getElementById('log-activity');
 var exerciseButton = document.getElementById('exercise-button');
 var meditateButton = document.getElementById('meditate-button');
 var studyButton = document.getElementById('study-button');
@@ -166,13 +167,13 @@ function changeButtonBorder() {
 function setCountdown() {
   var minutesToSeconds = gMinutes * 60;
   time = minutesToSeconds + gSeconds;
-  timerId = setInterval(startTimer, 1000)
+  timerId = setInterval(startTimer, 1000);
 }
 
 function startTimer() {
   var minutes = Math.floor(time/60);
   var seconds = time%60;
-  
+
   minutes = minutes < 10 ? '0' + minutes : minutes;
   seconds = seconds < 10 ? '0' + seconds : seconds;
 
@@ -180,6 +181,9 @@ function startTimer() {
   time --;
   if (time === -1) {
     clearInterval(timerId);
+    startButton.innerText = "COMPLETE";
+    window.alert('TIMES UP!');
+    // show(logActivity);
   }
 }
 
