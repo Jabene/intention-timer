@@ -18,15 +18,18 @@ var activityTimer = document.querySelector('#activity-timer');
 var accomplishOutput = document.querySelector('#accomplish-output');
 var timeLeft = document.querySelector('#time-left');
 var startButton = document.querySelector('#start-button');
-var form = document.getElementById('form')
+var form = document.getElementById('form');
 // allCategoryButtons.addEventListener('click', )
 studyButton.addEventListener('click', studyButtonClicked);
 meditateButton.addEventListener('click', meditateButtonClicked);
 exerciseButton.addEventListener('click', exerciseButtonClicked);
 charFilter.addEventListener('keydown', preventCharE);
-form.addEventListener('submit', startActivity)
+form.addEventListener('submit', startActivity);
+startButton.addEventListener('click', function() {
+   startTimer(timeLeft)})
 
 var savedActivities = [];
+var activity;
 
 function studyButtonClicked(e) {
   e.preventDefault();
@@ -106,6 +109,7 @@ function startActivity(e) {
   savedActivities.push(activity);
 }
 
+
 function updateTimer() {
   accomplishOutput.innerText = accomplishInput.value;
   timeLeft.innerText = `${minutes.value}:${seconds.value}`;
@@ -139,6 +143,7 @@ function checkInput() {
     hide(secondsWarning);
   }
 }
+
 function changeButtonBorder() {
   if (studyButton.classList.length > 1) {
     startButton.classList.add('study-button-clicked');
@@ -148,9 +153,32 @@ function changeButtonBorder() {
     startButton.classList.add('exercise-button-clicked');
   }
 }
+
+// function setInterval(startTimer, 1000);
+
+function startTimer() {
+  //activity.minutes = minutes
+  //activity.seconds = seconds 
+  var savedMinutes = parseInt(activity.minutes * 60);
+  var savedSeconds = parseInt(activity.seconds);
+  var time = savedMinutes + savedSeconds
+  
+  var minutesTimer = Math.floor(time/60)
+  var secondsTimer = time % 60
+
+      minutesTimer = minutes < 10 ? "0" + minutes : minutes;
+      secondsTimer = seconds < 10 ? "0" + seconds : seconds;
+
+      timeLeft.innerText = `${minutesTimer}:${secondsTimer}`
+      time--;
+
+  };
+
+
 function hide(element) {
     element.classList.add('hidden');
 }
+
 function show(element) {
     element.classList.remove('hidden');
 }
