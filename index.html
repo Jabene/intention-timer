@@ -8,37 +8,45 @@
   </head>
   <body>
     <header>
-        <h1>INTENTION TIMER</h1>
+      <h1>INTENTION TIMER</h1>
     </header>
     <main>
-      <!-- <section> for .new-activity-block and .past-activity-block -->
-      <section class="body-blocks new-activity-block"> <!--remove id, combine into two classes-->
+      <section class="body-blocks new-activity-block">
         <h2 class="body-headings" id="">New Activity</h2>
           <form id="form">
-            <div id="form-alignment">
+            <div class="form-alignment" id="form-alignment">
               <div>
                 <h3>Select a category:</h3>
                 <div id="activity-buttons-row">
-                  <button class="activity-buttons" id="study-button"><img src="./assets/study.svg">Study</button>
-                  <button class="activity-buttons" id="meditate-button"><img src="./assets/meditate.svg">Meditate</button>
-                  <button class="activity-buttons" id="exercise-button"><img src="./assets/exercise.svg">Exercise</button>
+                  <button class="activity-buttons" id="study-button"><img id="study-icon" src="./assets/study.svg" alt="light bulb">Study</button>
+                  <button class="activity-buttons" id="meditate-button"><img id="meditate-icon" src="./assets/meditate.svg" alt="lotus flower">Meditate</button>
+                  <button class="activity-buttons" id="exercise-button"><img id="exercise-icon" src="./assets/exercise.svg" alt="running shoe">Exercise</button>
                 </div>
               </div>
               <div id="accomplish-input-column">
                 <label for="">What would you like to accomplish during this time?</label>
-                <input type="text" class="" id="" />
+                <input type="text-box" class="form-input" id="accomplish-input" />
+                <div class="warning-div hidden" id="accomplish-input-warning"><img class="warning-icon" src="./assets/warning.svg" alt="Warning icon">A description is required</div>
               </div>
               <div id="time-input-row">
                 <div class="time-input-columns">
-                  <label for="">Minutes</label>
-                  <input type="text" class="" id="" />
+                  <label for="minutes">Minutes</label>
+                  <input type="number" class="form-input" id="minutes" />
+                  <div class="small-warning-div hidden" id="minutes-input-warning"><img class="small-warning-icon" src="./assets/warning.svg" alt="Warning icon">An input is required</div>
                 </div>
                 <div class="time-input-columns">
-                  <label for="">Seconds</label>
-                  <input type="text" class="" id="" />
+                  <label for="seconds">Seconds</label>
+                  <input type="number" min="0" max="59" class="form-input" id="seconds" />
+                  <div class="small-warning-div hidden" id="seconds-input-warning"><img class="small-warning-icon" src="./assets/warning.svg" alt="Warning icon">An input is required</div>
                 </div>
               </div>
-              <button id="start-activity-button">START ACTIVITY</button>
+              <button value ="submit" type="submit" id="start-activity-button">START ACTIVITY</button>
+            </div>
+            <div class="activity-timer hidden" id="activity-timer">
+              <p id="accomplish-output"></p>
+              <p class="time-left" id="time-left"></p>
+              <button id="start-button">START</button>
+              <button class="hidden log-activity" id="log-activity">LOG ACTIVITY</button>
             </div>
           </form>
       </section>
@@ -48,5 +56,7 @@
         <p class="no-activities">Complete the form to the left to get started!</p>
       </section>
     </main>
+    <script src="./activity.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
-/*
-Main background: #2B2733
+
+/* Main background: #2B2733
 Text on main background: #CBC9CF
 Header, cards: #46424D
 Card shadow: #26222D
@@ -7,8 +7,8 @@ Text on header and cards: #FFF
 Study: #B3FD78
 Meditate: #C278FD
 Exercise: #FD8078
-Error: #EFB7EC
-*/
+Error: #EFB7EC */
+
 
 * {
   font-family:"montserrat";
@@ -58,9 +58,9 @@ main {
   background-color:#46424D;
   width:95%;
   height:90%;
-  display:flex;
   border-radius:7px;
   box-shadow:5px 10px #26222d;
+  display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
@@ -83,7 +83,7 @@ main {
   margin-top:10%;
 }
 
-#form-alignment {
+.form-alignment {
   display:flex;
   flex-direction:column;
   justify-content:space-evenly;
@@ -111,20 +111,57 @@ main {
   font-size:1em;
 }
 
+.meditate-button-clicked {
+  border-color:#C278FD;
+  color:#C278FD;
+}
+
+.study-button-clicked {
+  border-color:#B3FD78;
+  color:#B3FD78;
+}
+
+.exercise-button-clicked {
+  border-color:#FD8078;
+  color:#FD8078;
+}
+
 buttons,
 img {
   width:15%;
   padding-bottom:.25em;
 }
 
-buttons,
-h4 {
-
-}
-
 #accomplish-input-column {
   display:flex;
   flex-direction:column;
+}
+
+.warning-div {
+  color:#EFB7EC;
+  display:flex;
+  flex-direction:row;
+  align-items:flex-end;
+  margin-top:2%;
+  font-size:1em;
+}
+
+.small-warning-div {
+  color:#EFB7EC;
+  display:flex;
+  flex-direction:row;
+  align-items:flex-end;
+  margin-top:5%;
+}
+
+.warning-icon {
+  width:3%;
+  margin-right:1.5%;
+}
+
+.small-warning-icon {
+  width:6%;
+  margin-right:3%;
 }
 
 #time-input-row {
@@ -138,8 +175,7 @@ h4 {
   width: 40%;
 }
 
-form,
-input {
+.form-input {
   height:3em;
   background-color:#46424D;
   border-bottom:solid 1px;
@@ -158,4 +194,45 @@ input {
   border:0px;
   background-color:white;
   color:#46424D;
+}
+
+.activity-timer {
+  width:30%;
+  height:100%;
+  margin:0px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-size:1.75em;
+}
+
+#activity-timer > p {
+  margin-bottom:0px;
+}
+
+#activity-timer > #time-left {
+  font-size:4em;
+  margin-top:0px;
+}
+
+#activity-timer > button {
+  width:27vh;
+  height:27vh;
+  background-color:#46424D;
+  border-style: solid;
+  border-width: 4px;
+  color:#FFF;
+  border-radius:100%;
+  font-size: 1.3em;
+  margin-top:5vh;
+  margin-bottom:15vh;
+}
+
+.log-activity {
+
+}
+
+.hidden {
+  display:none;
 }
