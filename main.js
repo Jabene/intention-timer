@@ -28,6 +28,7 @@ charFilter.addEventListener('keydown', preventChar);
 // startActivityButton.addEventListener('click', submitForm);
 startButton.addEventListener('click', counter)
 form.addEventListener('submit', submitForm)
+
 function studyButtonClicked(e) {
   e.preventDefault();
   studyButtonToggle();
@@ -93,7 +94,9 @@ function submitForm(e) {
   if (!checkInput()) {
     return;
   }
-  changeButtonBorder();
+  if (!changeButtonBorder()) {
+    return;
+  };
   accomplishOutput.innerText = accomplishInput.value;
   hide(formAlignment);
   show(activityTimer);
@@ -115,7 +118,7 @@ function selectCategory() {
     return 'meditate';
   } else if (exerciseButton.classList.length > 1) {
     return 'exercise';
-  }
+  } 
 }
 function checkInput() {
   if (!accomplishInput.value) {
@@ -139,13 +142,22 @@ function checkInput() {
     return false;
   }
 }
+
+///if no activity buttons row clocked, startButton.disabled = true 
+
 function changeButtonBorder() {
   if (studyButton.classList.length > 1) {
     startButton.classList.add('study-button-clicked');
+    return true;
   } else if (meditateButton.classList.length > 1) {
     startButton.classList.add('meditate-button-clicked');
+    return true;
   } else if (exerciseButton.classList.length > 1) {
     startButton.classList.add('exercise-button-clicked');
+    return true;
+  } else {
+    document.querySelector('#button-selection-warning').classList.remove('hidden')
+    return false;
   }
 }
 function counter(e) {
