@@ -61,12 +61,12 @@ main {
   height:100%;
   background-color:#2B2733;
 }
-.no-activities {
-  display:flex;
+.no-activity-card {
+  /* display:flex;
   flex-direction:row;
-  justify-content:center;
+  justify-content:center; */
 }
-#no-activity-paragraph {
+#no-activity-card {
   margin-top:10%;
 }
 .form-alignment {
@@ -205,6 +205,12 @@ img {
 }
 .log-activity {
 }
+
+.activity-type-identifier {
+  background-color:white;
+  border:2px solid pink;
+}
+
 .hidden {
   display:none;
 }
