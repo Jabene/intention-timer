@@ -32,7 +32,7 @@
                 <div class="time-input-columns">
                   <label for="minutes">Minutes</label>
                   <input type="number" class="form-input" id="minutes" />
-                  <div class="small-warning-div hidden" id="minutes-input-warning"><img class="small-warning-icon" src="./assets/warning.svg" alt="Warning icon">An input is required</div>
+                  <p class="small-warning-div hidden" id="minutes-input-warning"><img class="small-warning-icon" src="./assets/warning.svg" alt="Warning icon">An input is required</p>
                 </div>
                 <div class="time-input-columns">
                   <label for="seconds">Seconds</label>
@@ -40,15 +40,15 @@
                   <div class="small-warning-div hidden" id="seconds-input-warning"><img class="small-warning-icon" src="./assets/warning.svg" alt="Warning icon">An input is required</div>
                 </div>
               </div>
-              <button value ="submit" type="submit" id="start-activity-button">START ACTIVITY</button>
+              <button type="submit" id="start-activity-button">START ACTIVITY</button>
             </div>
             <div class="activity-timer hidden" id="activity-timer">
               <p id="accomplish-output"></p>
               <p class="time-left" id="time-left"></p>
               <button id="start-button">START</button>
               <button class="hidden log-activity" id="log-activity">LOG ACTIVITY</button>
-            </div>
-          </form>
+            </form>
+          </div>
       </section>
       <section class="body-blocks past-activity-block">
         <h2 class="body-headings">Past Activities</h2>
