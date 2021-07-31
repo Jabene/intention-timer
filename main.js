@@ -143,8 +143,6 @@ function checkInput() {
   }
 }
 
-///if no activity buttons row clocked, startButton.disabled = true 
-
 function changeButtonBorder() {
   if (studyButton.classList.length > 1) {
     startButton.classList.add('study-button-clicked');

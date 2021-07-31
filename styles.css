@@ -195,6 +195,14 @@ img {
   margin-top:5vh;
   margin-bottom:15vh;
 }
+.congratulatory-message {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: orangered;
+  font-size: xx-large;
+}
 .log-activity {
 }
 .hidden {

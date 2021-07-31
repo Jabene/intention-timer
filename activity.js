@@ -24,6 +24,9 @@ class Activity {
   markComplete() {
     startButton.disabled = false;
     this.completed = true;
+    hide(activityTimer)
+    show(document.querySelector('.congratulatory-message'))
+    // document.querySelector('#activity-timer').classList.add('hidden')
   }
   saveToStorage() {
   }
