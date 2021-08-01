@@ -22,12 +22,13 @@ class Activity {
       this.markComplete()
     }
   }
-  
+
   markComplete() {
     startButton.disabled = false;
     this.completed = true;
     hide(activityTimer)
     show(document.querySelector('.congratulatory-message'))
+    formHeading.innerText = "Completed Activity";
     // document.querySelector('#activity-timer').classList.add('hidden')
   }
 
