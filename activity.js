@@ -19,17 +19,16 @@ class Activity {
     this.time--;
     if (this.time === -1) {
       clearInterval(this.counterId);
-      this.markComplete()
+      this.markComplete();
     }
   }
 
   markComplete() {
     startButton.disabled = false;
     this.completed = true;
-    hide(activityTimer)
-    show(document.querySelector('.congratulatory-message'))
+    hide(activityTimer);
+    show(document.querySelector('.congratulatory-message'));
     formHeading.innerText = "Completed Activity";
-    // document.querySelector('#activity-timer').classList.add('hidden')
   }
 
   saveToStorage() {
