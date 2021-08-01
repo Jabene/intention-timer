@@ -183,6 +183,7 @@ function logActivity(e) {
   e.preventDefault();
   currentActivity.saveToStorage();
   verifyLocalStorage();
+  location.reload();
 }
 
 function verifyLocalStorage() {
@@ -205,14 +206,14 @@ function populateCards() {
   document.querySelector('.past-activity-cards').innerHTML = "";
   for (var i = 0; i < savedActivities.length; i++) {
     document.querySelector('.past-activity-cards').innerHTML +=
-    `<section>
-      <div>
-        <p>${savedActivities[i].category}</p>
-        <p>${savedActivities[i].minutes} MIN ${savedActivities[i].seconds} SEC</p>
-        <p>${savedActivities[i].description}</p>
+    `<section class="activity-card">
+      <div class="card-text">
+        <p class="card-exercise">${savedActivities[i].category}</p>
+        <p class="card-time">${savedActivities[i].minutes} MIN ${savedActivities[i].seconds} SEC</p>
+        <p class="card-description">${savedActivities[i].description}</p>
       </div>
       <div class='activity-type-identifier'></div>
-    </section>`
+     </section>`
   }
 }
 
