@@ -19,7 +19,7 @@ var accomplishOutput = document.querySelector('#accomplish-output');
 var timeLeft = document.querySelector('#time-left');
 var startButton = document.querySelector('#start-button');
 var form = document.querySelector('form');
-
+var formHeading = document.querySelector('#form-heading')
 var savedActivities = [];
 var currentActivity = {};
 
@@ -117,6 +117,7 @@ function submitForm(e) {
   timeLeft.innerHTML = `${currentActivity.minutes}:${currentActivity.seconds}`;
   var minutesToSeconds = currentActivity.minutes * 60;
   currentActivity.time = parseInt(currentActivity.seconds) + parseInt(minutesToSeconds);
+  formHeading.innerText = "Current Activity";
 }
 
 function verifySmallNumbers() {
@@ -126,11 +127,11 @@ function verifySmallNumbers() {
 
 function selectCategory() {
   if (studyButton.classList.length > 1) {
-    return 'study';
+    return 'Study';
   } else if (meditateButton.classList.length > 1) {
-    return 'meditate';
+    return 'Meditate';
   } else if (exerciseButton.classList.length > 1) {
-    return 'exercise';
+    return 'Exercise';
   }
 }
 
@@ -212,7 +213,7 @@ function populateCards() {
         <p class="card-time">${savedActivities[i].minutes} MIN ${savedActivities[i].seconds} SEC</p>
         <p class="card-description">${savedActivities[i].description}</p>
       </div>
-      <div class='activity-type-identifier'></div>
+      <div class='activity-type-identifier ${savedActivities[i].category}'></div>
      </section>`
   }
 }
