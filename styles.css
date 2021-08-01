@@ -61,12 +61,12 @@ main {
   height:100%;
   background-color:#2B2733;
 }
-.no-activities {
-  display:flex;
+.no-activity-card {
+  /* display:flex;
   flex-direction:row;
-  justify-content:center;
+  justify-content:center; */
 }
-#no-activity-paragraph {
+#no-activity-card {
   margin-top:10%;
 }
 .form-alignment {
@@ -142,11 +142,13 @@ img {
   display:flex;
   justify-content:space-between;
 }
+
 .time-input-columns {
   display:flex;
   flex-direction:column;
   width: 40%;
 }
+
 .form-input {
   height:3em;
   background-color:#46424D;
@@ -157,6 +159,7 @@ img {
   font-size:1em;
   padding-top:20px;
 }
+
 #start-activity-button {
   align-self:flex-end;
   height:5%;
@@ -166,6 +169,7 @@ img {
   background-color:white;
   color:#46424D;
 }
+
 .activity-timer {
   width:30%;
   height:100%;
@@ -176,13 +180,16 @@ img {
   align-items:center;
   font-size:1.75em;
 }
+
 #activity-timer > p {
   margin-bottom:0px;
 }
+
 #activity-timer > #time-left {
   font-size:4em;
   margin-top:0px;
 }
+
 #activity-timer > button {
   width:27vh;
   height:27vh;
@@ -195,6 +202,7 @@ img {
   margin-top:5vh;
   margin-bottom:15vh;
 }
+
 .congratulatory-message {
   display:flex;
   flex-direction: column;
@@ -203,8 +211,15 @@ img {
   color: orangered;
   font-size: xx-large;
 }
+
 .log-activity {
 }
+
+.activity-type-identifier {
+  background-color:white;
+  border:2px solid pink;
+}
+
 .hidden {
   display:none;
 }
