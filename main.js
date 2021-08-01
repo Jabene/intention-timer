@@ -23,7 +23,7 @@ var form = document.querySelector('form');
 var savedActivities = [];
 var currentActivity = {};
 
-showPastActivities();
+verifyLocalStorage();
 
 studyButton.addEventListener('click', studyButtonClicked);
 meditateButton.addEventListener('click', meditateButtonClicked);
@@ -182,18 +182,27 @@ function counter(e) {
 function logActivity(e) {
   e.preventDefault();
   currentActivity.saveToStorage();
-  showPastActivities();
+  verifyLocalStorage();
+}
+
+function verifyLocalStorage() {
+  if (localStorage.length) {
+    showPastActivities();
+  }
 }
 
 function showPastActivities() {
+  var retrievedActivity = localStorage.getItem('pastActivityString');
+  savedActivities = JSON.parse(retrievedActivity);
   if (savedActivities.length) {
     hide(document.querySelector('.no-activity-card'));
     show(document.querySelector('.past-activity-cards'));
+    populateCards();
   }
+}
 
-  var retrievedActivity = localStorage.getItem('pastActivityString');
-  savedActivities = JSON.parse(retrievedActivity);
-
+function populateCards() {
+  document.querySelector('.past-activity-cards').innerHTML = "";
   for (var i = 0; i < savedActivities.length; i++) {
     document.querySelector('.past-activity-cards').innerHTML +=
     `<section>
