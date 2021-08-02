@@ -19,7 +19,7 @@ var accomplishOutput = document.querySelector('#accomplish-output');
 var timeLeft = document.querySelector('#time-left');
 var startButton = document.querySelector('#start-button');
 var form = document.querySelector('form');
-var formHeading = document.querySelector('#form-heading')
+var formHeading = document.querySelector('#form-heading');
 var savedActivities = [];
 var currentActivity = {};
 
@@ -56,7 +56,7 @@ function exerciseButtonToggle() {
     meditateButtonToggle();
   }
   exerciseButton.classList.toggle('exercise-button-clicked');
-  if (exerciseButton.classList.contains('exercise-button-clicked')){
+  if (exerciseButton.classList.contains('exercise-button-clicked')) {
     exerciseImage.src = "./assets/exercise-active.svg";
   } else {
     exerciseImage.src = "./assets/exercise.svg";
@@ -71,10 +71,10 @@ function studyButtonToggle() {
     exerciseButtonToggle();
   }
   studyButton.classList.toggle('study-button-clicked');
-  if (studyButton.classList.contains('study-button-clicked')){
-      studyImage.src = "./assets/study-active.svg";
+  if (studyButton.classList.contains('study-button-clicked')) {
+    studyImage.src = "./assets/study-active.svg";
   } else {
-      studyImage.src = "./assets/study.svg";
+    studyImage.src = "./assets/study.svg";
   }
 }
 
@@ -86,10 +86,10 @@ function meditateButtonToggle() {
     exerciseButtonToggle();
   }
   meditateButton.classList.toggle('meditate-button-clicked');
-  if (meditateButton.classList.contains('meditate-button-clicked')){
-      meditateImage.src = "./assets/meditate-active.svg";
+  if (meditateButton.classList.contains('meditate-button-clicked')) {
+    meditateImage.src = "./assets/meditate-active.svg";
   } else {
-      meditateImage.src = "./assets/meditate.svg";
+    meditateImage.src = "./assets/meditate.svg";
   }
 }
 
@@ -107,7 +107,7 @@ function submitForm(e) {
   }
   if (!changeButtonBorder()) {
     return;
-  };
+  }
   accomplishOutput.innerText = accomplishInput.value;
   hide(formAlignment);
   show(activityTimer);
@@ -169,7 +169,7 @@ function changeButtonBorder() {
     startButton.classList.add('exercise-button-clicked');
     return true;
   } else {
-    document.querySelector('#button-selection-warning').classList.remove('hidden')
+    document.querySelector('#button-selection-warning').classList.remove('hidden');
     return false;
   }
 }
@@ -177,7 +177,7 @@ function changeButtonBorder() {
 function counter(e) {
   e.preventDefault();
   startButton.disabled = true;
-  currentActivity.counterId = setInterval(function(){currentActivity.countdown()}, 1000)
+  currentActivity.counterId = setInterval(function(){currentActivity.countdown()}, 1000);
 }
 
 function logActivity(e) {
@@ -214,7 +214,7 @@ function populateCards() {
         <p class="card-description">${savedActivities[i].description}</p>
       </div>
       <div class='activity-type-identifier ${savedActivities[i].category}'></div>
-     </section>`
+     </section>`;
   }
 }
 
