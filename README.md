@@ -31,9 +31,9 @@ Use [<https://gifcap.dev/>](<https://gifcap.dev/>) to make GIFs
   - Install instructions, how to access the website and how to use the website
 
 ## Contributors
-  - [Raquel Hill](<https://github.com/hheyhhay>)
-  - [Joshua Benefield] (<https://github.com/Jabene>)
-  - [Elise Beall] (<https://github.com/elisebeall>)
+  - [Raquel Hill](https://github.com/Raquelhill)
+  - [Joshua Benefield](<https://github.com/Jabene>)
+  - [Elise Beall](<https://github.com/elisebeall>)
 
 ## Wins
   - What went well!
