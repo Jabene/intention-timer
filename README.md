@@ -4,7 +4,6 @@ Mod 1 + Intention Timer
 ## Table of Contents
   - [Abstract](#abstract)
   - [Technologies](#technologies)
-  - [Code Architecture](#code-architecture)
   - [Illustrations](#illustrations)
   - [Install + Setup](#set-up)
   - [Contributors](#contributors)
@@ -21,14 +20,12 @@ Mod 1 + Intention Timer
   - Atom
   - CSS 
 
-## Code Architecture
-
 ## Illustrations
 
 Use [<https://gifcap.dev/>](<https://gifcap.dev/>) to make GIFs
 
 ## Install + Setup
-  - Install instructions, how to access the website and how to use the website
+  - The user is able to visit [the Intention Timer site](https://github.com/Jabene/intention-timer) and can immediately plug its own inputs into the app.  
 
 ## Contributors
   - [Raquel Hill](https://github.com/Raquelhill)
@@ -36,8 +33,8 @@ Use [<https://gifcap.dev/>](<https://gifcap.dev/>) to make GIFs
   - [Elise Beall](<https://github.com/elisebeall>)
 
 ## Wins
-  - What went well!
-  - Successes
+  - We were successful in creating CSS that matched the comp of the project.  
+  - Our local storage persisted upon page load.  
 
 ## Challenges + Improvements
   - What was difficult & how you would like to improve on code/project
@@ -45,4 +42,4 @@ Use [<https://gifcap.dev/>](<https://gifcap.dev/>) to make GIFs
   - Future Iterations
 
 ## Project Specs
-  - The project spec & rubric can be found [here] (https://frontend.turing.edu/projects/module-1/intention-timer-group.html)
+  - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/intention-timer-group.html)
