@@ -22,7 +22,7 @@ Mod 1 + Intention Timer
 
 ## Illustrations
 
-(https://media.giphy.com/media/6CXi2xBTd6fDwh7rbM/giphy.gif)
+[!Gif showing site functionality](https://media.giphy.com/media/6CXi2xBTd6fDwh7rbM/giphy.gif)
 
 
 ## Install + Setup
