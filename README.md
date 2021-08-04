@@ -22,15 +22,16 @@ Mod 1 + Intention Timer
 
 ## Illustrations
 
-Use [<https://gifcap.dev/>](<https://gifcap.dev/>) to make GIFs
+(https://media.giphy.com/media/6CXi2xBTd6fDwh7rbM/giphy.gif)
+
 
 ## Install + Setup
   - The user is able to visit [the Intention Timer site](https://jabene.github.io/intention-timer/) and can immediately plug its own inputs into the app.  
 
 ## Contributors
   - [Raquel Hill](https://github.com/Raquelhill)
-  - [Joshua Benefield](<https://github.com/Jabene>)
-  - [Elise Beall](<https://github.com/elisebeall>)
+  - [Joshua Benefield](https://github.com/Jabene)
+  - [Elise Beall](https://github.com/elisebeall)
 
 ## Wins
   - We were successful in creating CSS that matched the comp of the project.  
