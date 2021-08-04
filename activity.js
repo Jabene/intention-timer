@@ -13,9 +13,7 @@ class Activity {
   countdown() {
     var minutes = Math.floor(this.time/60);
     var seconds = this.time%60;
-    seconds = seconds < 10 ? '0' + seconds : seconds;
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    timeLeft.innerHTML = `${minutes}:${seconds}`;
+    verifySmallNumbers(minutes, seconds);
     this.time--;
     if (this.time === -1) {
       clearInterval(this.counterId);
@@ -26,9 +24,7 @@ class Activity {
   markComplete() {
     startButton.disabled = false;
     this.completed = true;
-    hide(activityTimer);
-    show(document.querySelector('.congratulatory-message'));
-    formHeading.innerText = "Completed Activity";
+    completeTimer();
   }
 
   saveToStorage() {
