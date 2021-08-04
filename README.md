@@ -25,7 +25,7 @@ Mod 1 + Intention Timer
 Use [<https://gifcap.dev/>](<https://gifcap.dev/>) to make GIFs
 
 ## Install + Setup
-  - The user is able to visit [the Intention Timer site](https://github.com/Jabene/intention-timer) and can immediately plug its own inputs into the app.  
+  - The user is able to visit [the Intention Timer site](https://jabene.github.io/intention-timer/) and can immediately plug its own inputs into the app.  
 
 ## Contributors
   - [Raquel Hill](https://github.com/Raquelhill)
