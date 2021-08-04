@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./styles.css" />
@@ -17,27 +17,27 @@
               <div>
                 <h3>Select a category:</h3>
                 <div id="activity-buttons-row">
-                  <button class="activity-buttons" id="study-button"><img id="study-icon" src="./assets/study.svg" alt="light bulb">Study</button>
-                  <button class="activity-buttons" id="meditate-button"><img id="meditate-icon" src="./assets/meditate.svg" alt="lotus flower">Meditate</button>
-                  <button class="activity-buttons" id="exercise-button"><img id="exercise-icon" src="./assets/exercise.svg" alt="running shoe">Exercise</button>
+                  <button class="activity-buttons" id="study-button"><img id="study-icon" src="./assets/study.svg" alt="light bulb" />Study</button>
+                  <button class="activity-buttons" id="meditate-button"><img id="meditate-icon" src="./assets/meditate.svg" alt="lotus flower" />Meditate</button>
+                  <button class="activity-buttons" id="exercise-button"><img id="exercise-icon" src="./assets/exercise.svg" alt="running shoe" />Exercise</button>
                 </div>
-                <p class="warning-p hidden" id="button-selection-warning"><img class="warning-icon" src="./assets/warning.svg" alt="Warning icon">A selection is required</p>
+                <p class="warning-p hidden" id="button-selection-warning"><img class="warning-icon" src="./assets/warning.svg" alt="Warning icon" />A selection is required</p>
               </div>
               <div id="accomplish-input-column">
                 <label for="accomplish-input">What would you like to accomplish during this time?</label>
                 <input type="text-box" maxlength="30" class="form-input" id="accomplish-input" />
-                <p class="warning-p hidden" id="accomplish-input-warning"><img class="warning-icon" src="./assets/warning.svg" alt="Warning icon">A description is required</p>
+                <p class="warning-p hidden" id="accomplish-input-warning"><img class="warning-icon" src="./assets/warning.svg" alt="Warning icon" />A description is required</p>
               </div>
               <div id="time-input-row">
                 <div class="time-input-columns">
                   <label for="minutes">Minutes</label>
-                  <input type="number" class="form-input" id="minutes" />
-                  <p class="small-warning-p hidden" id="minutes-input-warning"><img class="small-warning-icon" src="./assets/warning.svg" alt="Warning icon">An input is required</p>
+                  <input type="number" min="0" max="120" class="form-input" id="minutes" />
+                  <p class="small-warning-p hidden" id="minutes-input-warning"><img class="small-warning-icon" src="./assets/warning.svg" alt="Warning icon" />An input is required</p>
                 </div>
                 <div class="time-input-columns">
                   <label for="seconds">Seconds</label>
-                  <input type="number" min="0" max="59" class="form-input" id="seconds" />
-                  <p class="small-warning-p hidden" id="seconds-input-warning"><img class="small-warning-icon" src="./assets/warning.svg" alt="Warning icon">An input is required</p>
+                  <input type="number" min="0" max="59" maxlength="2" class="form-input" id="seconds" />
+                  <p class="small-warning-p hidden" id="seconds-input-warning"><img class="small-warning-icon" src="./assets/warning.svg" alt="Warning icon" />An input is required</p>
                 </div>
               </div>
               <button type="submit" id="start-activity-button">START ACTIVITY</button>
