@@ -37,9 +37,9 @@ Use [<https://gifcap.dev/>](<https://gifcap.dev/>) to make GIFs
   - Our local storage persisted upon page load.  
 
 ## Challenges + Improvements
-  - What was difficult & how you would like to improve on code/project
-  - Any Bugs
-  - Future Iterations
+  - The countdown timer was the biggest challenge for our group.  
+  - We had a bug where the user was able to input 0 + seconds and 00(seconds input) would appear on the timer.  
+  - If we had more time, we would want to combine the toggleButton functions into one function.  
 
 ## Project Specs
   - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/intention-timer-group.html)
